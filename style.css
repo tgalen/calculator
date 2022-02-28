@@ -20,21 +20,32 @@ header {
     background-color: rgb(100, 98, 98);
     border-radius: 10px;
     margin: auto;
-    display: grid;
 }
 
 #calc-display {
     background-color: black;
     width: 96%;
-    height: 45%;
-    margin: 2%;
+    height: 20%;
+    margin: auto;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#screen {
+    width: 80%;
+    height: 50%;
+    background-color: azure;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-bottom: 3%;
+    align-content: center;
 }
 
 #calc-buttons-container {
-    /* background-color: aliceblue;
-    height: 100%;
+    background-color: lightgray;
+    height: 75%;
     width: 96%;
-    margin: 2%;
-    border-radius: 10px; */
+    margin: auto;
+    border-radius: 10px;
 }
