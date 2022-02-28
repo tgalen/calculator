@@ -1,0 +1,40 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(201, 194, 194);
+    font-family: "Orbitron", sans-serif;
+}
+
+header {
+    text-align: center;
+    font-size: 3em;
+}
+
+#calc-container {
+    margin-top: 2%;
+}
+
+#calc-body {
+    width: 30vw;
+    height: 60vh;
+    background-color: rgb(100, 98, 98);
+    border-radius: 10px;
+    margin: auto;
+    display: grid;
+}
+
+#calc-display {
+    background-color: black;
+    width: 96%;
+    height: 45%;
+    margin: 2%;
+    border-radius: 10px;
+}
+
+#calc-buttons-container {
+    /* background-color: aliceblue;
+    height: 100%;
+    width: 96%;
+    margin: 2%;
+    border-radius: 10px; */
+}
