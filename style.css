@@ -40,6 +40,10 @@ header {
     align-self: flex-end;
     margin-bottom: 3%;
     align-content: center;
+    text-align: right;
+    padding-top: 2%;
+    padding-bottom: 0%;
+    padding-right: 2%;
 }
 
 #calc-buttons-container {
