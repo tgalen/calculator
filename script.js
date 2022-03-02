@@ -4,9 +4,13 @@ screen = document.getElementById("screen");
 
 let filterString = (numStr) => {
     // filter out leading 0
-    let strToNum = parseInt(numStr);
-    let numToStr = strToNum.toString();
-    return numToStr;
+    if (numStr[numStr.length - 1] === ".") {
+        return numStr;
+    } else {
+        let strToNum = parseFloat(numStr);
+        let numToStr = strToNum.toString();
+        return numToStr;
+    }
 };
 
 console.log(filterString("999"));
@@ -15,13 +19,14 @@ let selectNumber = (num) => {
     pendingNumber.length > 0 ? (pendingNumber = filterString(pendingNumber)) : (pendingNumber = pendingNumber); // prevent an empty string being converted to a nunmber
     if (pendingNumber.includes(".") && num === ".") {
         pendingNumber += "";
+        console.log(pendingNumber);
     } else if (pendingNumber.length < 10) {
         pendingNumber += num;
     } else {
         pendingNumber = pendingNumber;
     }
-    pendingNumberToInt = parseInt(pendingNumber);
-    screen.innerHTML = pendingNumberToInt;
+    // pendingNumberToInt = parseInt(pendingNumber);
+    screen.innerHTML = pendingNumber;
 };
 
 let clearScreen = () => {
@@ -35,4 +40,4 @@ let sqrRoot = () => {
     screen.innerHTML = Math.sqrt(num).toFixed(9); // need to eliminate trailing 0's
 };
 
-let operator = () => {};
+let initiateOperation = (operator) => {};
