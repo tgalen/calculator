@@ -103,7 +103,7 @@ header {
     width: 30%;
     height: 22%;
     font-size: 1.2em;
-    background-color: orange;
+    background-color: #8cadff;
     margin: 1%;
     align-content: center;
     text-align: center;
@@ -127,4 +127,10 @@ header {
 
 .operator-button:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    #calc-body {
+        width: 90vw;
+    }
 }
