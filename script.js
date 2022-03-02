@@ -4,10 +4,12 @@ screen = document.getElementById("screen");
 
 let selectNumber = (num) => {
     // pendingNumber += num;
-    console.log(pendingNumber);
-
-    pendingNumber.length < 9 ? (pendingNumber += num) : (pendingNumber = pendingNumber);
+    if (pendingNumber.includes(".") && num === ".") {
+        pendingNumber += "";
+    }
+    pendingNumber.length < 10 ? (pendingNumber += num) : (pendingNumber = pendingNumber);
     screen.innerHTML = parseInt(pendingNumber);
+    console.log(pendingNumber);
 };
 
 let clearScreen = () => {
@@ -18,5 +20,7 @@ let clearScreen = () => {
 let sqrRoot = () => {
     num = parseInt(screen.innerHTML);
     console.log(num);
-    screen.innerHTML = Math.sqrt(num).toFixed(9);
+    screen.innerHTML = Math.sqrt(num).toFixed(9); // need to eliminate trailing 0's
 };
+
+let operator = () => {};
