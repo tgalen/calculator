@@ -27,6 +27,7 @@ let selectNumber = (num) => {
     }
     // pendingNumberToInt = parseInt(pendingNumber);
     screen.innerHTML = pendingNumber;
+    localStorage.setItem("savedNumber", pendingNumber);
 };
 
 let clearScreen = () => {
@@ -40,4 +41,6 @@ let sqrRoot = () => {
     screen.innerHTML = Math.sqrt(num).toFixed(9); // need to eliminate trailing 0's
 };
 
-let initiateOperation = (operator) => {};
+let initiateOperation = (operator) => {
+    localStorage.setItem("savedNumber", pendingNumber);
+};
