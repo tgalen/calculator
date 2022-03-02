@@ -57,11 +57,30 @@ header {
 }
 
 #solar {
-    width: 60%;
+    width: 80%;
     height: 10%;
-    background-color: rgb(49, 42, 42);
-    margin: auto;
+    margin-top: 0;
     border: 5px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#clear {
+    background-color: red;
+}
+
+.panel {
+    background-color: blueviolet;
+    border-radius: 2px;
+    width: 20%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.panel:hover {
+    cursor: pointer;
 }
 
 #number-btn-container {
