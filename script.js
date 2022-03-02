@@ -35,7 +35,7 @@ let clearScreen = () => {
 };
 
 let sqrRoot = () => {
-    num = parseInt(screen.innerHTML);
+    num = parseFloat(screen.innerHTML);
     console.log(num);
     screen.innerHTML = Math.sqrt(num).toFixed(9); // need to eliminate trailing 0's
 };
