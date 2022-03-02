@@ -56,7 +56,7 @@ header {
     flex-wrap: wrap;
 }
 
-#solar {
+#top-row {
     width: 80%;
     height: 10%;
     margin-top: 0;
@@ -70,7 +70,7 @@ header {
     background-color: red;
 }
 
-.panel {
+.top-row-btn {
     background-color: blueviolet;
     border-radius: 2px;
     width: 20%;
