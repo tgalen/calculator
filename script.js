@@ -32,6 +32,7 @@ let clearScreen = () => {
     pendingNumber = "0";
     screen.innerHTML = parseInt(pendingNumber);
     console.log(pendingNumber);
+    localStorage.setItem("savedNumber", pendingNumber);
 };
 
 let sqrRoot = () => {
