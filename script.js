@@ -13,26 +13,25 @@ let filterString = (numStr) => {
     }
 };
 
-console.log(filterString("999"));
-
 let selectNumber = (num) => {
     pendingNumber.length > 0 ? (pendingNumber = filterString(pendingNumber)) : (pendingNumber = pendingNumber); // prevent an empty string being converted to a nunmber
     if (pendingNumber.includes(".") && num === ".") {
         pendingNumber += "";
-        console.log(pendingNumber);
     } else if (pendingNumber.length < 10) {
         pendingNumber += num;
     } else {
         pendingNumber = pendingNumber;
     }
     // pendingNumberToInt = parseInt(pendingNumber);
-    screen.innerHTML = pendingNumber;
+    screen.innerHTML = parseFloat(pendingNumber);
+
     localStorage.setItem("savedNumber", pendingNumber);
 };
 
 let clearScreen = () => {
     pendingNumber = "0";
     screen.innerHTML = parseInt(pendingNumber);
+    console.log(pendingNumber);
 };
 
 let sqrRoot = () => {
