@@ -88,4 +88,5 @@ let equals = () => {
     localStorage.removeItem("operator");
     localStorage.setItem("firstNumber", result);
     localStorage.removeItem("secondNumber");
+    pendingNumber = "";
 };
