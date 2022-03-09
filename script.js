@@ -90,3 +90,12 @@ let equals = () => {
     localStorage.removeItem("secondNumber");
     pendingNumber = "";
 };
+
+let getPercent = () => {
+    if (localStorage.getItem("secondNumber") == null) {
+        localStorage.setItem("firstNumber", parseFloat(localStorage.getItem("firstNumber")) / 100);
+        screen.innerHTML = localStorage.getItem("firstNumber");
+    } else {
+        localStorage.setItem("secondNumber", parseFloat(localStorage.getItem("secondNumber")) / 100);
+    }
+};
