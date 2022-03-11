@@ -1,12 +1,13 @@
-let pendingNumber = "";
+let pendingNumber = "0";
 let enteredNumber = "";
 localStorage.removeItem("operator");
-localStorage.removeItem("firstNumber");
+localStorage.setItem("firstNumber", 0);
 screen = document.getElementById("screen");
 const add = document.getElementById("+");
 const subtract = document.getElementById("-");
 const multiply = document.getElementById("x");
 const divide = document.getElementById("/");
+screen.innerHTML = pendingNumber;
 
 let filterString = (numStr) => {
     // filter out leading 0
@@ -67,7 +68,7 @@ let sqrRoot = () => {
 
 let saveSelectedOperation = (operator) => {
     localStorage.setItem("operator", operator);
-    pendingNumber = "";
+    pendingNumber = "0";
 };
 
 let equals = () => {
@@ -97,5 +98,6 @@ let getPercent = () => {
         screen.innerHTML = localStorage.getItem("firstNumber");
     } else {
         localStorage.setItem("secondNumber", parseFloat(localStorage.getItem("secondNumber")) / 100);
+        screen.innerHTML = localStorage.getItem("secondNumber");
     }
 };
